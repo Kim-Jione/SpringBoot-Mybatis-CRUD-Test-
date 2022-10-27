@@ -6,6 +6,7 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
+				<th>번호</th>
 				<th>상품명</th>
 				<th>상품가격</th>
 				<th>상품수량</th>
@@ -13,11 +14,12 @@
 		</thead>
 		<tbody>
 
-			<c:forEach var="findAll" items="${findAll}">
+			<c:forEach var="product" items="${product}">
 				<tr>
-					<td>${findAll.productName}</td>
-					<td>${findAll.productPrice}</a></td>
-					<td>${findAll.productQty}</td>
+					<td>${product.productId}</td>
+					<td><a href="/product/${product.productId}">${product.productName}</a></td>
+					<td>${product.productPrice}</td>
+					<td>${product.productQty}</td>
 				</tr>
 			</c:forEach>
 
