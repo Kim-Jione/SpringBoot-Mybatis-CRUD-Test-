@@ -9,6 +9,8 @@
 		<a href="/product/${detail.productId}/edit" class="btn btn-warning">수정하러가기</a>
 
 	</form>
-
+	<form action="/product/${detail.productId}/delete" method="post">
+		<button class="btn btn-danger">삭제하기</button>
+	</form>
 </div>
 <%@ include file="layout/footer.jsp"%>
