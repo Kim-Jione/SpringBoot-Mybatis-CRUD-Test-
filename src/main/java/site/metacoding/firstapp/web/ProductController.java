@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.firstapp.domain.Product;
 import site.metacoding.firstapp.domain.ProductDao;
+import site.metacoding.firstapp.web.dto.UpdateDto;
 
 @RequiredArgsConstructor
 @Controller
@@ -42,6 +43,22 @@ public class ProductController {
         return "redirect:/";
     }
     
+    // 수정하기
+    @GetMapping("/product/{id}/edit")
+    public String productUpdate(@PathVariable Integer id, Product product, Model model) {
+    	model.addAttribute("update", productDao.findById(id));
+        return "ProductUpdate";
+    }
+    
+    @PostMapping("/product/{id}/edit")
+    public String update(@PathVariable Integer id, Product product) {
+    	Product productPS = productDao.findById(id);
+    	productPS.update(product);
+    	productDao.update(productPS);
+    	return "redirect:/product/" + id;
+    }
+    
+ 
     
     
 }

@@ -6,7 +6,9 @@
 		<div class="mb-3 mt-3">상품명 : ${detail.productName}</div>
 		<div class="mb-3 mt-3">상품가격 : ${detail.productPrice}</div>
 		<div class="mb-3 mt-3">상품수량 : ${detail.productQty}</div>
+		<a href="/product/${detail.productId}/edit" class="btn btn-warning">수정하러가기</a>
 
 	</form>
+
 </div>
 <%@ include file="layout/footer.jsp"%>
