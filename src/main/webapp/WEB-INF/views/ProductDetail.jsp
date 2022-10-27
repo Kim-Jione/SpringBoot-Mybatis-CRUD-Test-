@@ -4,8 +4,8 @@
 <div class="container">
 	<form action="/product/add" method="post">
 		<div class="mb-3 mt-3">상품명 : ${detail.productName}</div>
-		<div class="mb-3 mt-3">상품가격 :</div>
-		<div class="mb-3 mt-3">상품수량 :</div>
+		<div class="mb-3 mt-3">상품가격 : ${detail.productPrice}</div>
+		<div class="mb-3 mt-3">상품수량 : ${detail.productQty}</div>
 
 	</form>
 </div>

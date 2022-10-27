@@ -38,12 +38,8 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href="/product">상품목록페이지</a>
 					</li>
-
-					<li class="nav-item"><a class="nav-link" href="/product/{id}">상품상세보기페이지</a>
-					</li>
-
-					<li class="nav-item"><a class="nav-link" href="/product/{id}/edit">상품수정페이지</a>
-					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="/product/{id}/edit">상품수정페이지</a></li>
 				</ul>
 			</div>
 		</div>
