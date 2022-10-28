@@ -4,9 +4,13 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.RequiredArgsConstructor;
 import site.metacoding.firstapp.domain.Product;
@@ -15,7 +19,8 @@ import site.metacoding.firstapp.domain.ProductDao;
 @RequiredArgsConstructor
 @Controller
 public class ProductController {
-
+	
+	private final ProductService productService;
 	private final ProductDao productDao;
 	
     @GetMapping({"/product", "/"})
@@ -36,11 +41,6 @@ public class ProductController {
         return "ProductSave";
     }
     
-    @PostMapping("/product/add")
-    public String add(Product product) {
-    	productDao.insert(product);
-        return "redirect:/";
-    }
     
     // 수정하기
     @GetMapping("/product/{id}/edit")
@@ -64,5 +64,18 @@ public class ProductController {
     	return "redirect:/";
     }
     
+    // 상품명 중복확인
+    @GetMapping("/product/productNameSameCheck")
+	public @ResponseBody CMRespDto<Boolean> productNameSameCheck(String productName) {
+		boolean isSame = productService.상품명중복확인(productName);
+		return new CMRespDto<>(1, "성공", isSame);
+	}
+    
+    // 등록하기
+    @PostMapping("/product/add")
+	public @ResponseBody CMRespDto<?> join(@RequestBody Product product) {
+		productDao.insert(product);
+		return new CMRespDto<>(1, "상품등록성공", null);
+	}
     
 }

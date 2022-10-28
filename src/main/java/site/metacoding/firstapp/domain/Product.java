@@ -3,9 +3,6 @@ package site.metacoding.firstapp.domain;
 import java.sql.Timestamp;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import site.metacoding.firstapp.web.dto.UpdateDto;
-
 
 @Getter
 public class Product {
