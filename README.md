@@ -32,3 +32,40 @@ create table product(
 INSERT INTO product(product_name, product_price, product_qty, created_at) VALUES('바나나', 3000, 98, NOW());
 INSERT INTO product(product_name, product_price, product_qty, created_at) VALUES('딸기', 2000, 100, NOW());
 ```
+
+### 6. 페이지
+상품 목록보기 페이지
+
+
+<img src="https://user-images.githubusercontent.com/106166409/198586568-1b62571c-8a2d-4965-aaf8-9410159da57d.png"  width="1000"/>
+
+
+상품 상세보기 페이지
+
+
+
+<img src="https://user-images.githubusercontent.com/106166409/198585831-0e5d34dd-82a0-4aa2-b00a-be8fb11c76b5.png"  width="1000"/>
+
+상품 등록하기 페이지
+
+
+<img src="https://user-images.githubusercontent.com/106166409/198586891-2e1bea4b-d698-4b3e-becd-5e5e95a8f422.png"  width="1000"/>
+
+상품 수정하기 페이지
+
+
+
+<img src="https://user-images.githubusercontent.com/106166409/198585977-6595bfe6-5e6b-4e08-b949-d5ca496a3ff8.png"  width="1000"/>
+
+
+상품등록 유효성 검사
+
+
+<img src="https://user-images.githubusercontent.com/106166409/198591059-7627beb8-4392-49ff-b786-c238841c031d.gif"  width="1000"/>
+
+
+
+
+
+
+
