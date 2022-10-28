@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.firstapp.domain.Product;
 import site.metacoding.firstapp.domain.ProductDao;
-import site.metacoding.firstapp.web.dto.UpdateDto;
 
 @RequiredArgsConstructor
 @Controller
