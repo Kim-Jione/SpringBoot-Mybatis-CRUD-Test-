@@ -56,7 +56,7 @@ function save() {
 		if (res.code == 1) {
 			location.href = "/";
 		} else {
-			alert(res.msg);
+			alert("중복체크를 다시 확인해주세요");
 			history.back();
 		}
 	});
