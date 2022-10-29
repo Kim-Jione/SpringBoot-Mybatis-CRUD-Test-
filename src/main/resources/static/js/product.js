@@ -79,7 +79,7 @@ function checkProductName() {
 			} else {
 				alert("상품명이 중복되었어요. 다른 상품명을 사용해주세요.");
 				isProductNameSameCheck = false;
-				$("#name").val("");
+				
 			}
 		}
 	});
