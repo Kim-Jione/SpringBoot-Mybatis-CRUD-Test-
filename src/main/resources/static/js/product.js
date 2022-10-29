@@ -50,7 +50,7 @@ function save() {
 		dataType: "json", //응답 데이터(CMRespDto)
 		data: JSON.stringify(data), // http body에 들고갈 요청 데이터
 		headers: { // http header에 들고갈 요청 데이터
-			"Content-Type": "application/json"
+			"Content-Type": "application/json; charset=utf-8"
 		}
 	}).done((res) => {
 		if (res.code == 1) {
